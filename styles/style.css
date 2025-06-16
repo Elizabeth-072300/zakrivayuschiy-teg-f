@@ -27,13 +27,14 @@
   background-color: var(--bg-color);
   border: var(--border-width) solid var(--accent-color);
   font-family: var(--accent-font), monospace;
-  min-inline-size: 48.6vw;
 }
 
 .logo__group {
   display: grid;
   place-content: center;
   gap: 20px;
+  padding-inline-start: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
+  padding-inline-end: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   padding-block-start: clamp(7.5rem, 7.3543rem + 0.7175vw, 8rem);
   padding-block-end: clamp(7.5rem, 7.3543rem + 0.7175vw, 8rem);
 }
@@ -52,8 +53,9 @@
 }
 
 .card__list {
-  inline-size: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
-  padding-top: 100px;
+  padding-block-start: 100px;
+  padding-inline-start: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);
+  padding-inline-end: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);
   display: grid;
   gap: 47px;
 }
@@ -162,13 +164,14 @@
 
 .card__icon-button {
   background-color: transparent;
-  position: relative;
   display: flex;
   align-items: center;
-  border: none;
-  outline: var(--border-width) solid transparent;
+  padding: 0;
+  border: var(--border-width) solid transparent;
   padding: var(--border-width);
-  inline-size: 39px;
+  /* inline-size: 39px; */
+  transition: border-color 0.3s ease;
+  appearance: none;
 }
 
 .card__icon-button:focus {
@@ -177,12 +180,12 @@
 
 .card__icon-button:focus-visible {
   border: var(--border-width) solid var(--accent-color);
-  transition: border 0.3s ease;
 }
 
 .card__like-button {
   inline-size: 130px;
-  padding: 12px 0;
+  padding: 10px 0;
+  line-height: 90%;
   cursor: pointer;
 }
 
